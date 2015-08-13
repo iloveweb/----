@@ -1,0 +1,31 @@
+<html>
+
+<head>
+
+<title></title>
+
+</head>
+
+<body>
+<script type="text/javascript">
+function Person(name,age)
+{
+this.name=name;
+this.age=age;
+if(typeof this.sayName !="function")
+{
+Person.prototype.sayName=function(){alert(this.name)};
+}
+}
+Person.prototype={
+construtor:Person;
+sayName:function() 
+  {alert(this.name);}
+}
+var person1=new Person("Tom",23);
+alert(person1 instanceof Person);
+alert(person1.construtor==Person);
+</script>
+</body>
+
+</html>

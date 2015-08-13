@@ -1,0 +1,39 @@
+body{
+	margin: 0 auto;
+	padding: 0;
+	width: 80%;
+	background-color:lightgoldenrodyellow;
+}
+#header{
+	height: 150px;
+	background-color: lightblue;
+}
+#container{
+	margin: 20px 0 20px 0;
+	display: -moz-box;
+	display: -webkit-box;
+}
+#left-sidebar{
+	width: 200px;
+	padding: 20px;
+	background-color: orange;
+}
+#contents{
+	-moz-box-flex: 1;
+	-webkit-box-flex: 1;
+	padding: 20px;
+	background-color: yellow;
+}
+#right-sidebar{
+	width: 200px;
+	padding: 20px;
+	background-color: limegreen;
+}
+#left-sidebar,#contents,#right-sidebar{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+#tail{
+	height: 150px;
+	background-color: lightcoral;
+}

@@ -1,0 +1,58 @@
+<html>
+
+<head>
+
+<title></title>
+
+</head>
+
+<body>
+<script type="text/javascript">
+<!--
+    Array.prototype.delRepeat=function(){
+        //tempArr：重复项标志,tempArr1：保存重复数组项
+        var tempArr=[],tempArr1=[],j=0;
+        //遍历数组
+        for(var i=this.length;i>0;i--){
+        
+             //如果该项还没有重复项
+             if(!tempArr[this[i-1]]){
+                tempArr[this[i-1]]=1;    //通过关联数组方式标志该项并置为1（代表出现一次）
+             }else{
+                tempArr1[j++]=this[i-1];    //如果第一次重复则将该重复项保存，并将重复标志+1
+                this.splice(i-1,1);    //从原数组删除该项(因为是倒序遍历，所以可以直接在此删除)
+             }
+            }
+        
+        
+        return tempArr1;    //返回重复项列表
+    }
+    Array.prototype.uniq = function () {
+    var result = [];
+    var flag = true;
+     
+    for (var i = 0; i < this.length; i++) {
+        var temp = this[i];
+        if (typeof temp == "number" && isNaN(temp)) {
+            if (flag) {
+                result.push(temp);
+            }
+            flag = false;
+        } else if (result.indexOf(temp) === -1) {
+            result.push(temp);
+        }
+    }
+     
+    return result;
+}
+    var a=new Array(5,410,52,",",24,5,",",true,false,24,24,25,5,NaN,NaN,null,{},{});
+    b=a.uniq();
+   alert(typeof({}));
+   alert("原数组:"+a);
+   // alert("重复项:"+a.uniq());
+    alert("剩余项:"+b);
+//-->
+</script>
+</body>
+
+</html>

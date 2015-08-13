@@ -1,0 +1,6 @@
+1 直接点击node-v0.12.7-x86.msi
+2 会自动安装npm,安装好后再执行
+  npm install -g grunt-cli即可。
+  grunt一般是针对一个具体的项目
+  采用npm安装的，所以grunt是当
+  项目需要时才安装，不是统一安装。

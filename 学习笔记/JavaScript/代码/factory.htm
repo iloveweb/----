@@ -1,0 +1,30 @@
+<html>
+
+<head>
+
+<title></title>
+
+</head>
+
+<body>
+<script type="text/javascript">
+function creatPerson(name,age)
+{
+   var o=new Object();
+   o.name=name;
+   o.age=age;
+   o.sayName=function(){alert(this.name)};
+   return o;
+}
+var person1=creatPerson("a",21);       //工厂模式
+var person2=new creatPerson("b",22);  //寄生构造函数模式
+
+alert(person1 instanceof Object);
+alert(typeof person1);
+alert(person2 instanceof creatPerson);
+alert(person2 instanceof Object);
+alert(typeof person2);
+</script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<html>
+
+<head>
+
+<title></title>
+
+</head>
+
+<body>
+<script type="text/javascript">
+function Person(name,age)
+{
+   this.name=name;
+   this.age=age;
+   this.sayName=function(){alert(this.name)};
+}
+var person1=new Person("a",21);
+var person2=new Person("b",22);
+person1.sayName();
+person2.sayName();
+alert(person1 instanceof Object);
+alert(person1 instanceof Person);
+alert(typeof person1);
+</script>
+</body>
+
+</html>
